@@ -1,0 +1,46 @@
+/* .key {
+  display: flex;
+  justify-content: center; /* שומר על מרכז רוחבי */
+  /* position: relative;      /* הכרחי למיקום span פנימי */
+  /* border: 1px solid #000;
+  margin: 1px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+} */ 
+/* 
+/* .key .note {
+  position: absolute;
+  top: 5px; /* מרחק מהחלק העליון של המקש */
+  /* text-align: center;
+  width: 100%; */
+/* }  */
+
+.keyboard {
+  position: relative;
+  display: flex;
+  justify-content: center; /* מרכז את האורגנית */
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* לבנים */
+.white {
+  width: 40px;
+  height: 180px;
+  background: white;
+  border: 1px solid black;
+  position: relative;
+  z-index: 1;
+}
+
+/* שחורים */
+.black {
+  width: 25px;
+  height: 120px;
+  background: black;
+  position: relative;
+  margin-left: -12px;  /* נכנס בין הלבנים */
+  margin-right: -12px;
+  z-index: 2;
+}

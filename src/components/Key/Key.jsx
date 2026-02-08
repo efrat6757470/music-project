@@ -1,16 +1,28 @@
 import React from 'react';
 import './Key.css';
-
-const Key = ({ note, playNote }) => {
+const Key = ({ note, onMouseDown, onMouseUp }) => {
   const isSharp = note.includes('#');
 
   return (
     <div
       className={`key ${isSharp ? 'black' : 'white'}`}
-      onClick={() => playNote(note)}
+      onMouseDown={onMouseDown}   // מתחיל לנגן כשלחצו
+      onMouseUp={onMouseUp}       // מפסיק לנגן כששחררו
+      onMouseLeave={onMouseUp}    // אם העכבר יצא מהקליד – גם מפסיק לנגן
     />
   );
 };
+
+// const Key = ({ note, playNote }) => {
+//   const isSharp = note.includes('#');
+
+//   return (
+//     <div
+//       className={`key ${isSharp ? 'black' : 'white'}`}
+//       onClick={() => playNote(note)}
+//     />
+//   );
+// };
 
 export default Key;
 
